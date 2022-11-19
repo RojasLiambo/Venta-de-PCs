@@ -1,0 +1,221 @@
+.section-title {
+	position: absolute;
+	top: 45vh;
+	left: 34%;
+	color: #fff;
+}
+
+/* banner */
+
+body .home-banner {
+	background-image: url("../Imagenes/banner-01.jpg");
+	width: 100%;
+	height: 100vh;
+	background-repeat: cover;
+	filter: brightness(60%);
+}
+
+.section-news {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* PROMOS */
+
+.section-news .promos {
+	border: 1px solid cyan;
+	border-radius: 8px;
+	padding: 20px 10px;
+	background-color: azure;
+}
+
+.section-news .promos .promo-description {
+	font-size: 20px;
+	line-height: 16px;
+	font-weight: 200;
+}
+
+/* PRODUCTS CARD */
+
+.section-products .card-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.section-products .card a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+
+.section-products .card a:hover {
+	opacity: 80%;
+}
+
+/* card */
+.section-products .card {
+	margin: 0px 8px 25px;
+	border: 1px solid black;
+	border-radius: 8px;
+	width: 230px;
+	box-shadow: 0px 8px 15px #c2c3c2;
+	transition: all 0.3s ease-out;
+}
+
+.section-products .card:hover {
+	box-shadow: none;
+}
+
+.section-products .card [class^="card-"] {
+	padding: 0px 15px;
+}
+
+/* header */
+.section-products .card .card-header {
+	background-color: rgb(255, 223, 219);
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 2px;
+	letter-spacing: 2px;
+}
+
+/* body */
+.section-products .card .card-body {
+	margin: 5px auto;
+}
+
+.section-products .card .product-image {
+	width: 200px;
+	height: 200px;
+}
+.section-products .card .card-body .description {
+	font-size: 16px;
+	line-height: 20px;
+	margin: 5px 0px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+/* footer */
+.section-products .card .card-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5px 0px 10px;
+}
+
+.section-products .card .card-footer .more-info {
+	margin: 0px;
+	border: 2px solid blue;
+	padding: 2px 10px;
+	font-weight: 500;
+	border-radius: 50%;
+}
+
+.section-products .card .card-footer .card-price {
+	margin: 0px;
+	text-align: right;
+	color: green;
+}
+
+.section-products .card .card-footer .currency {
+	font-size: 12px;
+}
+
+/* FAQ */
+.section-faq li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0 0 15px;
+	line-height: 25px;
+}
+
+.section-faq li:before {
+	margin-right: 15px;
+	content: "";
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background-position-x: left;
+	background-position-y: top;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	transform: ax;
+
+	background-image: url("../../src/Imagenes/question.png");
+}
+
+/* Our team */
+
+.section-our-team .our-team-title {
+	color: grey;
+}
+
+.section-our-team .team-wapper {
+	display: flex;
+	width: 100%;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.section-our-team .team-wapper {
+	height: 250px;
+}
+
+.section-our-team div[class^="team-member"] {
+	width: 150px;
+	height: 150px;
+	background-position-x: -55px;
+	background-position-x: center;
+	border-radius: 50%;
+	transition: all 0.3s ease-out;
+	border: 8px solid rgb(0, 150, 177);
+	background-repeat: no-repeat;
+	background-size: 260px;
+	background-position-y: -30px;
+	background-position-x: center;
+}
+
+.section-our-team div[class^="team-member"]:hover {
+	width: 250px;
+	height: 180px;
+	-moz-border-radius: 0 50% / 0 100%;
+	-webkit-border-radius: 0 50% / 0 100%;
+	border-radius: 0 50% / 0 100%;
+
+	border: 1px solid rgb(0, 150, 177);
+}
+
+.section-our-team .team-member1 {
+	background-image: url("../Imagenes/super1.jpg");
+}
+.section-our-team .team-member2 {
+	background-image: url("../Imagenes/super2.jpg");
+}
+.section-our-team .team-member3 {
+	background-image: url("../Imagenes/super3.jpg");
+}
+.section-our-team .team-member4 {
+	background-image: url("../Imagenes/super4.jpg");
+}
+
+.section-our-team .member-name {
+	text-align: right;
+	color: rgb(0, 150, 177);
+	margin: 5px 0;
+}
+
+.section-our-team .member-rol {
+	text-align: right;
+	margin: 5px 0;
+	font-size: 15px;
+	color: grey;
+}
