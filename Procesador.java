@@ -1,13 +1,13 @@
 package Modelo;
 /*
-MicheliLucio
+Mármol, Sofía
  */
 public class Procesador extends Componentes{
     
-    private double potencia;
+    private String potencia;
     
-    public Procesador(String mf, double p, String po, double i, double pot){
-        super(mf,p,po,i);
+    public Procesador(int ns, String mf, String nc, double p, double imp, String pot){
+        super(ns, mf, nc, p, imp);
         this.potencia = pot;
     }
 

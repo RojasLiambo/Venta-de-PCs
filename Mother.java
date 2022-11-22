@@ -7,8 +7,8 @@ public class Mother extends Componentes{
     
     private String NumSerie;
     
-    public Mother(String mf, double p, String po, double i, String ns){
-        super(mf,p,po,i);
+    public Mother(String mf, String nc, double p, double imp, String ns){
+        super(ns, mf, nc, p, imp);
         this.NumSerie = ns;
     }
 

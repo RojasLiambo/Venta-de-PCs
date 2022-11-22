@@ -5,10 +5,10 @@ package Modelo;
 
 public class Fuente extends Componentes{
     
-    private int potenciaWtts;
+    private String potenciaWtts;
     
-    public Fuente(String mf, double p, String po, double i, int pw){
-        super(mf,p,po,i);
+    public Fuente(int ns, String mf, String nc, double p, double imp, String pw){
+        super(ns, mf, nc, p, imp);
         this.potenciaWtts = pw;
     }
 
@@ -17,7 +17,7 @@ public class Fuente extends Componentes{
         double total = super.precio;
         total = total + super.impuesto;
         return total;
-    }
+    } 
 
     @Override
     public String toString() {

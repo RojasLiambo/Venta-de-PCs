@@ -5,10 +5,10 @@ package Modelo;
 
 public class TarjetaGrafica extends Componentes{
     
-    private double tamañomemoria;
+    private String tamañomemoria;
     
-    public TarjetaGrafica(String mf, double p, String po, double i, double tm){
-        super(mf,p,po,i);
+    public TarjetaGrafica(int ns, String mf, String nc, double p, double imp, String tm){
+        super(ns, mf, nc, p, imp );
         this.tamañomemoria = tm;
     }
 

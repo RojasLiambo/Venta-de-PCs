@@ -5,10 +5,10 @@ package Modelo;
 
 public class Mouse extends Componentes{
     
-    private int cantDPI;
+    private String cantDPI;
     
-    public Mouse(String mf, double p, String po, double i, int dpi){
-        super(mf,p,po,i);
+    public Mouse(int ns, String mf, String nc, double p, double imp, String dpi){
+        super(ns, mf, nc, p, imp);
         this.cantDPI = dpi;
     }
 

@@ -5,10 +5,10 @@ package Modelo;
 
 public class Monitor extends Componentes {
     
-    private int cantPulgadas;
+    private String cantPulgadas;
     
-    public Monitor(String mf, double p, String po, double i, int cp){
-        super(mf,p,po,i);
+    public Monitor(int ns, String mf, String nc, double p, double imp, String cp){
+        super(ns, mf, nc, p, imp);
         this.cantPulgadas = cp;
     }
 

@@ -1,14 +1,15 @@
+package Modelo;
+
 /*
 Mármol, Sofía Luz
  */
-package Modelo;
 
 public class MemoriaRAM extends Componentes{
     
-    private double tamaño;
+    private String tamaño;
     
-    public MemoriaRAM(String mf, double p, String po, double i, double t){
-        super(mf,p,po,i);
+    public MemoriaRAM(int ns, String mf, String nc, double p, double imp, String t){
+        super(ns, mf, nc, p, imp);
         this.tamaño = t;
     }
 
