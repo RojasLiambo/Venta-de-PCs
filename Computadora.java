@@ -1,5 +1,5 @@
 
-package Hijasdecomputadora;
+package Modelo;
 
 public abstract class Computadora {
     protected int numeroComputadora;
