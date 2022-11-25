@@ -1,5 +1,5 @@
 
-package Hijasdecomputadora;
+package Modelo;
 
 import java.util.ArrayList;
 public class Armada extends Computadora{
