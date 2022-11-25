@@ -1,5 +1,5 @@
 
-package Hijasdecomputadora;
+package Modelo;
 
 import java.util.Date;
 import java.util.ArrayList;
