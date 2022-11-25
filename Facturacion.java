@@ -1,56 +1,49 @@
 
-package Modelo;
-/*
- Micheli Lucio
- */
+package Hijasdecomputadora;
+
+import java.util.Date;
 import java.util.ArrayList;
 
 public class Facturacion {
+    private int NumeroFactura ;
     private Cliente cliente;
+    private Date FechaFactu;
     private Empleado empleado;
     private ArrayList<Computadora> listapc = new ArrayList();
-    private String metodoCompra;
-
-    public Facturacion(Cliente c, Empleado e,ArrayList<Computadora> lpc, String mc){
+    private String metodocompra;
+    
+    
+    public Facturacion(int nf,Cliente c,Empleado e,ArrayList<Computadora> lpc,String mc){
+        this.NumeroFactura = nf;
         this.cliente = c;
-        this.empleado = e;
-        this.metodoCompra = mc;
         this.listapc = lpc;
+        this.metodocompra = mc; 
+        
     }
-
-    public double totalComputadora(){
+    public double TotalComputadoras(){
         double total = 0;
         for (int i = 0; i < this.listapc.size(); i++) {
-            total += Computadora.totalComponentes();
+            total += Computadora.TotalComputadora();
         }
         return total;
     }
-    public double aplicarDescuento(){
-        double descuento = 0;
-        double resta = 0;
-        resta = totalComputadora() * 5 / 100;
-        descuento = totalComputadora() - resta;
-        return descuento;
-    }
-    public double generarTotal(){
-        double total = 0;
-        if (listapc.size() > 1) {
-            total = aplicarDescuento();
-        }else{
-            total = totalComputadora();
+    public ArrayList<String> totalInfoPc(){
+        ArrayList<String> infopcs = new ArrayList();
+        for (int i = 0; i < this.listapc.size(); i++) {
+            infopcs.add(Computadora.DescripcionComputadora());
         }
-        return total;
+        return infopcs;
     }
-    public double totalFactuEmple(){
-        double factuemple = 0;
-
-        return factuemple;
+    public double totalImpuesto(){
+        double totali=0;
+        for (int i = 0; i < this.listapc.size(); i++) {
+            totali += Computadora.calcularImpuestos();
+        }
+        return totali;
     }
-    public String toString(){
-        String StringFacturaDesc = "";
-      if(listapc.size>1){
-          StringFacturaDesc = "\"--- Se aplico un descuento del 5% por su compra numero:" +listapc.size();
-      }
-      String factura = StringFacturaDesc + "\n La facturacion del empleado es " +totalFactuEmple()+ "/n EL TOTAL A PAGAR ES: " + generarTotal();
+    public String emitirTicket(){
+        String Ticket;
+        Ticket = "Cliente: " +cliente +"/n Empleado que lo atendio: "+empleado+"/n Informacion Computadora/s: " +totalInfoPc()+ "/n Total de impuestos dentro del precio: "+totalImpuesto()+"/n TOTAL A PAGAR: " + TotalComputadoras();
+        return Ticket;
     }
 }

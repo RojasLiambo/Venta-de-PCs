@@ -1,25 +1,32 @@
 
-package Modelo;
-/*
- Micheli Lucio
- */
-import java.util.ArrayList;
-public class Computadora {
-    private ArrayList<Componentes> listaComponentes = new ArrayList();
-    private String descripcion;
- 
-    public Computadora(ArrayList<Componentes> lc, String d){
-        this.descripcion = d;
-        this.listaComponentes = lc;
-        
+package Hijasdecomputadora;
+
+public abstract class Computadora {
+    protected int numeroComputadora;
+    protected String paisorigen;
+    
+    public Computadora(int nc, String po){
+        this.numeroComputadora = nc;
+        this.paisorigen = po;
     }
-    public double totalComponentes(){
-        double total = 0;
-        total = Componentes.calcularPrecio;
-        return total;
+    public abstract double TotalComputadora();
+    public abstract double calcularImpuestos();
+    public abstract String DescripcionComputadora();
+
+    public int getNumeroComputadora() {
+        return numeroComputadora;
     }
-    public String toString(){
-        String datos = "La descripcion de la computadora es: " + descripcion + "el precio total de los componentes es: " +totalComponentes();
-        return datos;
+
+    public void setNumeroComputadora(int numeroComputadora) {
+        this.numeroComputadora = numeroComputadora;
     }
+
+    public String getPaisorigen() {
+        return paisorigen;
+    }
+
+    public void setPaisorigen(String paisorigen) {
+        this.paisorigen = paisorigen;
+    }
+    
 }
