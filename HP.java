@@ -1,7 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/**
+ *
+ * @author Micheli Lucio
  */
+
 package Modelo;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class HP extends Computadora{
     public double TotalComputadora() {
         double total = 0;
         for (int i = 0; i < this.listacomp.size(); i++) {
-           total += Componentes.totalComponentes(); 
+           total += this.listacomp.get(i).totalComponentes(); 
         }
         return total;
     }
@@ -26,14 +27,15 @@ public class HP extends Computadora{
     public double calcularImpuestos(){
         double impuestosComponentes = 0;
         for (int i = 0; i < this.listacomp.size(); i++) {
-            impuestosComponentes += Componentes.getimpuesto();
+            impuestosComponentes += this.listacomp.get(i).getImpuesto();
         }
+        return impuestosComponentes;
     }
     
     public ArrayList<String>nombreComponentes(){
         ArrayList<String> nombreComponentes = new ArrayList();
         for (int i = 0; i < this.listacomp.size(); i++) {
-            nombreComponentes.add(Componentes.getnombreComponente());
+            nombreComponentes.add(this.listacomp.get(i).getNombreComponente());
         }
         
         return nombreComponentes;
@@ -42,7 +44,7 @@ public class HP extends Computadora{
     @Override
     public String DescripcionComputadora() {
         String Descripcion;
-        Descripcion = "Los componentes de la computadora HP son "+ nombreComponentes() + " Cuesta "+ TotalComputadora()+ "$" + " que contienen " + calcularImpuestos()+" de Impuestos";
+        Descripcion = "Los componentes de la computadora HP son "+ nombreComponentes() + "\n Cuesta "+ TotalComputadora()+ "$" + " que contienen " + calcularImpuestos()+" de Impuestos";
         return Descripcion;
     }
 

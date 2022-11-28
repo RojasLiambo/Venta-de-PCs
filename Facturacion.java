@@ -1,3 +1,7 @@
+/**
+ *
+ * @author Micheli Lucio
+ */
 
 package Modelo;
 
@@ -23,27 +27,27 @@ public class Facturacion {
     public double TotalComputadoras(){
         double total = 0;
         for (int i = 0; i < this.listapc.size(); i++) {
-            total += Computadora.TotalComputadora();
+            total += this.listapc.get(i).TotalComputadora();
         }
         return total;
     }
     public ArrayList<String> totalInfoPc(){
         ArrayList<String> infopcs = new ArrayList();
         for (int i = 0; i < this.listapc.size(); i++) {
-            infopcs.add(Computadora.DescripcionComputadora());
+            infopcs.add(this.listapc.get(i).DescripcionComputadora());
         }
         return infopcs;
     }
     public double totalImpuesto(){
         double totali=0;
         for (int i = 0; i < this.listapc.size(); i++) {
-            totali += Computadora.calcularImpuestos();
+            totali += this.listapc.get(i).calcularImpuestos();
         }
         return totali;
     }
     public String emitirTicket(){
         String Ticket;
-        Ticket = "Cliente: " +cliente +"/n Empleado que lo atendio: "+empleado+"/n Informacion Computadora/s: " +totalInfoPc()+ "/n Total de impuestos dentro del precio: "+totalImpuesto()+"/n TOTAL A PAGAR: " + TotalComputadoras();
+        Ticket = "Fecha: " + this.FechaFactu + "Cliente: " + this.cliente +"/n Empleado que lo atendio: "+ this.empleado+ "/n Metodo de compra"+ this.metodocompra + "/n Informacion Computadora/s: " +totalInfoPc()+ "/n Total de impuestos dentro del precio: "+totalImpuesto()+"/n TOTAL A PAGAR: " + TotalComputadoras();
         return Ticket;
     }
 }

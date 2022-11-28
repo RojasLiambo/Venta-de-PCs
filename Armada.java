@@ -1,3 +1,7 @@
+/**
+ *
+ * @author Micheli Lucio
+ */
 
 package Modelo;
 
@@ -13,7 +17,7 @@ public class Armada extends Computadora{
     public double TotalComputadora() {
         double total = 0;
         for (int i = 0; i < this.listacomp.size(); i++) {
-           total += Componentes.totalComponentes(); 
+           total += this.listacomp.get(i).totalComponentes(); 
         }
         return total;
     }
@@ -22,14 +26,15 @@ public class Armada extends Computadora{
     public double calcularImpuestos(){
         double impuestosComponentes = 0;
         for (int i = 0; i < this.listacomp.size(); i++) {
-            impuestosComponentes += Componentes.getImpuesto();
+            impuestosComponentes += this.listacomp.get(i).getImpuesto();
         }
+        return impuestosComponentes;
     }
     
     public ArrayList<String>nombreComponentes(){
         ArrayList<String> nombreComponentes = new ArrayList();
         for (int i = 0; i < this.listacomp.size(); i++) {
-            nombreComponentes += Componentes.getnombreComponente();
+            nombreComponentes.add(this.listacomp.get(i).getNombreComponente());
         }
         
         return nombreComponentes;
@@ -38,7 +43,7 @@ public class Armada extends Computadora{
     @Override
     public String DescripcionComputadora() {
         String Descripcion;
-        Descripcion = "Los componentes de la computadora HP son "+ nombreComponentes() + " Cuesta "+ TotalComputadora()+ "$" + " que contienen " + calcularImpuestos()+" de Impuestos";
+        Descripcion = "Los componentes de la computadora Armada son "+ nombreComponentes() + "\n Cuesta "+ TotalComputadora()+ "$" + " que contienen " + calcularImpuestos()+" de Impuestos";
         return Descripcion;
     }
 
